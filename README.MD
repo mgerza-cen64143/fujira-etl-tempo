@@ -106,6 +106,9 @@ Autentikace přes browser cookies: pokud se vám podaří nainstalovat broser_co
 
 ## Odkazy
 Confluence pro popis detailů ke GITHubu: https://cnfl.csin.cz/display/GITHUB/GITHUB+Home
+
 Confluence pro instalaci Pycharmu: https://cnfl.csin.cz/display/Automatizovanetestovanisoftwaru/PyCharm
+
 Confluence pro práci s GITem v Pycharmu: https://cnfl.csin.cz/display/Automatizovanetestovanisoftwaru/Git+v+PyCharmu
+
 
