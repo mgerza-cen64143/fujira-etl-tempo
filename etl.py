@@ -3,7 +3,6 @@ from requests.auth import HTTPBasicAuth
 import json
 import pandas as pd
 import time
-import browser_cookie3
 import configparser
 import sys
 import getopt
@@ -44,6 +43,7 @@ elif not gv.config[gv.ENV]['auth_cookies']:
     gv.auth_cookies = False
 else:
     from os.path import expanduser
+    import browser_cookie3
     my_home = expanduser("~")
     gv.cj = browser_cookie3.chrome(
        cookie_file="%s\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 2\\Network\\Cookies" % my_home)
