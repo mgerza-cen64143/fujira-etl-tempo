@@ -71,27 +71,35 @@ squads*.csv: definice squadů / jejich členů
 ```git clone <url_to_project>```
 4. nakonfiugujte si PIP
 
-v adresáři $HOME\pip vytvořte soubor **pip.ini**:
-```global]
+
+```
+C:\Users\CEN?????\pip\pip.ini
+
+[global]
 trusted-host = pypi.python.org
               pypi.org
               files.pythonhosted.org
               sdf.csin.cz
 index-url = https://sdf.csin.cz/artifactory/api/pypi/pypi/simple
 ```
-5. nainstalujte si knihovny:
+
+5. Nastavte si proxy v PyCharm IDE
+
+File > Settings > Appearance and Behavior > System Settings > Proxy
+- Manual proxy configuration
+- Host name: ngproxy.csin.cz
+- Port number: 80
+- Proxy authentication
+- Login XUC\CEN?????
+- Password <doménové heslo>
+
+
+6. nainstalujte si knihovny v PyCharm IDE:
+
+File > Settings > Project > Python Interpreter
 - requests
-- browser_cookie3
 - pandas
 
-v aplikaci Pycharm: File>Settings > Project > Python Interpreter
-
-v příkazové řádce:
-```
-pip install requests --user
-pip install browser_cookie3 --user
-pip install pandas --user
-```
 
 
 ## TODO
@@ -101,7 +109,7 @@ Není zde robustnost na abnormální situace (práva zápisu, nečekané odpově
 
 Zdrojové csv pro squady musí být bez chyb (jinak aplikace havaruje)
 
-Autentikace přes browser cookies: pokud se vám podaří nainstalovat broser_cookie3, jinak ne.
+Autentikace přes browser cookies: pokud se vám podaří nainstalovat browser_cookie3, jinak ne.
 
 
 ## Odkazy
