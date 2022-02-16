@@ -1,5 +1,4 @@
 from requests.auth import HTTPBasicAuth
-import browser_cookie3
 from dateutil.parser import parse
 import json
 import pandas as pd

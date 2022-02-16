@@ -34,20 +34,21 @@ gv.my_squads = pd.read_csv(gv.config[gv.ENV]['my_squads'], delimiter=';', encodi
 gv.overloaded_issues = json.loads(gv.config[gv.ENV]['issues_top_overload'])
 gv.simplify_switch = gv.config[gv.ENV].getboolean('simplify')
 gv.base_url = gv.config[gv.ENV]['base_url']
-gv.auth_cookies = gv.config[gv.ENV].getboolean('auth_cookies')
-if gv.config[gv.ENV]['auth_cookies'] is None:
-    gv.cj = ''
-    gv.auth_cookies=False
-elif not gv.config[gv.ENV]['auth_cookies']:
-    gv.cj = ''
-    gv.auth_cookies = False
-else:
-    from os.path import expanduser
-    import browser_cookie3
-    my_home = expanduser("~")
-    gv.cj = browser_cookie3.chrome(
-       cookie_file="%s\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 2\\Network\\Cookies" % my_home)
-    gv.auth_cookies=True
+gv.auth_cookies = False     # LEGACY: gv.config[gv.ENV].getboolean('auth_cookies')
+
+# if gv.config[gv.ENV]['auth_cookies'] is None:
+#     gv.cj = ''
+#     gv.auth_cookies=False
+# elif not gv.config[gv.ENV]['auth_cookies']:
+#     gv.cj = ''
+#     gv.auth_cookies = False
+# else:
+#     from os.path import expanduser
+#     import browser_cookie3
+#     my_home = expanduser("~")
+#     gv.cj = browser_cookie3.chrome(
+#        cookie_file="%s\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 2\\Network\\Cookies" % my_home)
+#     gv.auth_cookies=True
 
 '''
 Functions definitions
